@@ -1,18 +1,484 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <View
+                android:id="@+id/austria1"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#CF0000"
+                app:layout_constraintBottom_toTopOf="@+id/austria2"
+
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/austria3"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#CF0000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/austria2"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/austria2"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/austria3"
+                app:layout_constraintTop_toBottomOf="@+id/austria1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Австрия"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <View
+                android:id="@+id/poland1"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:background="#E4E0E0"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/poland2"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:background="#CF0000"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Польша"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <View
+                android:id="@+id/italian1"
+                android:layout_width="23dp"
+                android:layout_height="50dp"
+
+                android:background="#257829"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/italian2"
+                android:layout_width="23dp"
+                android:layout_height="50dp"
+                android:background="#E3DFDF"
+                app:layout_constraintStart_toEndOf="@+id/italian1" />
+
+            <View
+                android:id="@+id/italian3"
+                android:layout_width="23dp"
+                android:layout_height="50dp"
+                android:background="#CF0000"
+                app:layout_constraintStart_toEndOf="@+id/italian2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Италия"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/сolombia1"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="#F8C019"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/сolombia2"
+                android:layout_width="100dp"
+                android:layout_height="22dp"
+                android:background="#213493"
+                app:layout_constraintTop_toBottomOf="@+id/сolombia1" />
+
+            <View
+                android:id="@+id/сolombia3"
+                android:layout_width="100dp"
+                android:layout_height="22dp"
+                android:background="#CF0000"
+                app:layout_constraintTop_toBottomOf="@+id/сolombia2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Колумбия"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.8"
+            android:padding="10dp">
+
+            <View
+                android:id="@+id/madagascar1"
+                android:layout_width="25dp"
+                android:layout_height="50dp"
+                android:background="#E4E1E1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/madagascar2"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:background="#CF0000"
+                app:layout_constraintStart_toEndOf="@+id/madagascar1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/madagascar3"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:background="#4CAF50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/madagascar1"
+                app:layout_constraintTop_toBottomOf="@+id/madagascar2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Мадагаскар"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:paddingLeft="10dp">
+
+            <View
+                android:id="@+id/thailand1"
+                android:layout_width="150dp"
+                android:layout_height="17dp"
+                android:background="#CF0000"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/thailand2"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="#324DB1"
+                app:layout_constraintBottom_toTopOf="@+id/thailand3"
+                app:layout_constraintTop_toBottomOf="@+id/thailand1" />
+
+            <View
+                android:id="@+id/thailand3"
+                android:layout_width="150dp"
+                android:layout_height="17dp"
+                android:background="#CF0000"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Таиланд"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.8"
+            android:padding="10dp">
+
+            <View
+                android:id="@+id/denmark1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#CF0000"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/denmark2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#CF0000"
+
+                app:layout_constraintTop_toBottomOf="@+id/denmark1"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/denmark3"
+
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+
+                android:background="#CF0000"
+                app:layout_constraintStart_toEndOf="@+id/denmark1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/denmark4"
+
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#CF0000"
+
+                app:layout_constraintStart_toEndOf="@+id/denmark2"
+                app:layout_constraintTop_toBottomOf="@+id/denmark3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Дания"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <View
+                android:id="@+id/switzerland1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:background="#CF0000" />
+
+            <View
+                android:id="@+id/switzerland2"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/switzerland1"
+                app:layout_constraintEnd_toEndOf="@+id/switzerland1"
+                app:layout_constraintStart_toStartOf="@+id/switzerland1"
+                app:layout_constraintTop_toTopOf="@+id/switzerland1" />
+
+
+            <View
+                android:id="@+id/switzerland3"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/switzerland1"
+                app:layout_constraintEnd_toEndOf="@+id/switzerland1"
+                app:layout_constraintStart_toStartOf="@+id/switzerland1"
+                app:layout_constraintTop_toTopOf="@+id/switzerland1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Швейцария"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
